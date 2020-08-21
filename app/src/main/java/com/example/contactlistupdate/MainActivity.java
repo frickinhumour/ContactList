@@ -32,14 +32,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                cNAme = name.getText().toString();
-                cNumber = number.getText().toString();
                 Intent int1 =new Intent(getApplicationContext(), mylist.class);
-                int1.putExtra("cName",cNAme);
-                int1.putExtra("cNumber",cNumber);
+                int1.putExtra("cName",name.getText().toString());
+                int1.putExtra("cNumber",number.getText().toString());
 
                 Toast.makeText(MainActivity.this, cNumber, Toast.LENGTH_SHORT).show();
                 startActivity(int1);
+                name.setText("");
+                number.setText("");
 
             }
         });
